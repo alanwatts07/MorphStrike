@@ -62,26 +62,6 @@ install_python_deps() {
     cat > "$SCRIPT_DIR/requirements.txt" << EOF
 requests>=2.25.1
 pyyaml>=5.4.1
-asyncio>=3.4.3
-aiofiles>=0.7.0
-websockets>=9.1
-pathlib>=1.0.1
-dataclasses>=0.6
-uuid>=1.30
-logging>=0.4.9.6
-threading>=1.0
-socketserver>=0.4
-http.server>=0.6
-json>=2.0.9
-datetime>=4.3
-enum34>=1.1.10
-argparse>=1.4.0
-tempfile>=1.0
-subprocess>=1.0
-signal>=1.0
-os>=1.0
-sys>=1.0
-time>=1.0
 EOF
 
     # Check if we're in a virtual environment
