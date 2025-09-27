@@ -84,7 +84,13 @@ sys>=1.0
 time>=1.0
 EOF
 
-    pip3 install --user -r "$SCRIPT_DIR/requirements.txt"
+    # Check if we're in a virtual environment
+    if [[ "$VIRTUAL_ENV" != "" ]]; then
+        log_info "Virtual environment detected: $VIRTUAL_ENV"
+        pip3 install -r "$SCRIPT_DIR/requirements.txt"
+    else
+        pip3 install --user -r "$SCRIPT_DIR/requirements.txt"
+    fi
     log_success "Python dependencies installed"
 }
 
